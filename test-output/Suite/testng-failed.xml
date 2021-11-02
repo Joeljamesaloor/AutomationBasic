@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="usr" value="user1"/>
+  <parameter name="pwd" value="password"/>
+  <parameter name="usrinv" value="password"/>
+  <listeners>
+    <listener class-name="resources.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="slideTest.Scenarios">
+        <methods>
+          <include name="xternalbrowser" invocation-numbers="0"/>
+          <include name="nointernet" invocation-numbers="0"/>
+          <include name="loginvalid" invocation-numbers="0"/>
+          <include name="cachelogin"/>
+          <include name="logindisplay"/>
+          <include name="loginerror" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- slideTest.Scenarios -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
